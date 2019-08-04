@@ -1,2 +1,3 @@
-# winterslowcentralstores
-Winterslow Central Stores website, created by Luke Day
+# Winterslow Central Stores
+
+Website created by Luke Day
