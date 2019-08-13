@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,900');
 
+:root {
+  --main-blue: #24c;
+}
+
 body {
   margin: 0;
 }
@@ -11,7 +15,7 @@ body {
 }
 
 .navbar {
-  margin: 0 400px 0 400px;  
+  margin: 0 20vw;  
   color: white;
   font-family: 'Lato', sans-serif;
   font-size: 1.5rem;
@@ -19,15 +23,15 @@ body {
 }
 
 .title {
-  float: left;
-  line-height: 3rem;
+  float: left;  
+  padding: 2.5vh 1vw;
 }
 
 .navbar a {
   float: right;
   color: #777;
   text-align: center;
-  padding: 14px 16px;
+  padding: 2.5vh 1vw;
   text-decoration: none;
 }
 
@@ -35,22 +39,35 @@ body {
   color: #aaa;
 }
 
+.navbar a.active {
+  color: #aaa;
+}
+
+.navbar .responsive a {
+  display: block!important;
+  width: 100%!important;
+}
+
+.navbar .icon {
+  display: none;
+}
+
 .hero-container {
   display: flex;
   justify-content: center;
   width: 100%;
   height: auto;
-  background-color: #27d;
-  box-shadow: 0px 5px 10px black;
+  background-color: var(--main-blue);
+  box-shadow: 0vw 1vh 2vh black;
   position: relative;
   z-index: 1;
 }
 
 .hero {
-  margin: 100px 400px;
+  margin: 12vh 20vw;
   color: rgba(255,255,255,0.5);
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.5rem;
+  font-size: calc(16px + (24 - 16) * ((100vw - 500px) / (1920 - 500)));
   font-weight: 300;
 }
 
@@ -60,11 +77,17 @@ body {
   font-weight: 400;
 }
 
+@media screen and (max-width: 505px) {
+  .hero {
+    margin: 20vw;
+  }
+}
+
 .image-container {
   display: flex;
   justify-content: space-around;  
   width: 100%;
-  height: 400px;
+  height: 48vh;
   background-color: #59e;
   overflow: hidden;
 }
@@ -79,7 +102,7 @@ body {
   flex-direction: row;
   width: auto;
   height: auto;
-  padding: 100px 400px;
+  padding: 12vh 20vw;
 }
 
 .info {
@@ -93,7 +116,7 @@ body {
 
 .info-title {
   color: black;
-  margin-bottom: 25px;
+  margin-bottom: 3vh;
   font-size: 2rem;
   font-weight: 600;
 }
@@ -104,9 +127,20 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 200px;
+  height: 24vh;
   background-color: #444;
   color: white;
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
+}
+
+@media screen and (max-width: 1300px) {
+  .navbar a {
+    display: none;
+  }
+  
+  .navbar .icon {
+    display: initial;
+  }
+  /*display accordion*/
 }
