@@ -52,6 +52,17 @@ body {
   display: none;
 }
 
+@media screen and (max-width: 1300px) {
+  .navbar a {
+    display: none;
+  }
+  
+  .navbar .icon {
+    display: initial;
+  }
+  /*display accordion*/
+}
+
 .hero-container {
   display: flex;
   justify-content: center;
@@ -102,7 +113,7 @@ body {
   flex-direction: row;
   width: auto;
   height: auto;
-  padding: 12vh 20vw;
+  margin: 12vh 20vw;
 }
 
 .info {
@@ -121,6 +132,17 @@ body {
   font-weight: 600;
 }
 
+@media screen and (max-width: 1100px) {
+  .info-container {
+    display: block;
+  }
+  
+  .info {
+    width: 100%!important;
+    margin: 12vh 0 ;
+  }
+}
+
 #footer {
   display: flex;
   margin: auto;
@@ -132,15 +154,4 @@ body {
   color: white;
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
-}
-
-@media screen and (max-width: 1300px) {
-  .navbar a {
-    display: none;
-  }
-  
-  .navbar .icon {
-    display: initial;
-  }
-  /*display accordion*/
 }
