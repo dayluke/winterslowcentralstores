@@ -1,7 +1,7 @@
 function navbarMenu() {
+  var title = document.getElementById("name");
   var nav = document.getElementById("nav");
   var tabs = nav.getElementsByTagName("a");
-  var title = nav.getElementByClass("title");
   
   if (tabs[0].style.width === "100%") { // Menu is open, so close it.
     for (var i = 0; i < tabs.length - 1; i++) {
